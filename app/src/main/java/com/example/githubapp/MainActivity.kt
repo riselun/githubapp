@@ -31,13 +31,21 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            GitHubAppTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    GitHubApp(networkConnectivityMonitor)
-                }
+            AppContent()
+        }
+    }
+    
+    /**
+     * Default app content - can be overridden in tests
+     */
+    @Composable
+    fun AppContent() {
+        GitHubAppTheme {
+            Surface(
+                modifier = Modifier.fillMaxSize(),
+                color = MaterialTheme.colors.background
+            ) {
+                GitHubApp(networkConnectivityMonitor)
             }
         }
     }
