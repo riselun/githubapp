@@ -7,6 +7,7 @@ date: May 7, 2025
 # GitHub Android Application
 
 A native Android application that allows users to browse GitHub content, search repositories, view repository details, and interact with GitHub using their account.
+The UML class diagram is in the "docs" folder
 
 ## Features
 

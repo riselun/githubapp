@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
+import org.junit.Assert.assertFalse
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
@@ -85,6 +86,9 @@ class GithubRepositoryTest {
         assertEquals(mockRepositories, result.getOrNull())
     }
     
+    /**
+     * Test that isLoggedIn correctly maps the authToken flow to a boolean flow
+     */
     @Test
     fun `isLoggedIn returns flow of authentication state`() {
         // Arrange
@@ -93,8 +97,26 @@ class GithubRepositoryTest {
         
         // Act & Assert
         runBlocking {
+            // Collect the flow and verify the value
             githubRepository.isLoggedIn().collect { isLoggedIn ->
                 assertTrue(isLoggedIn)
+            }
+        }
+    }
+    
+    /**
+     * Test that isLoggedIn returns false when token is empty
+     */
+    @Test
+    fun `isLoggedIn returns false when token is empty`() {
+        // Arrange
+        val emptyTokenFlow: Flow<String> = flowOf("")
+        `when`(userPreferences.authToken).thenReturn(emptyTokenFlow)
+        
+        // Act & Assert
+        runBlocking {
+            githubRepository.isLoggedIn().collect { isLoggedIn ->
+                assertFalse(isLoggedIn)
             }
         }
     }
