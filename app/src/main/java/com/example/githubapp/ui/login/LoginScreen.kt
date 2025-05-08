@@ -19,6 +19,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.res.stringResource
+import com.example.githubapp.R
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.githubapp.ui.components.LoadingIndicator
@@ -36,10 +38,10 @@ fun LoginScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Login to GitHub") },
+                title = { Text(stringResource(R.string.login_to_github)) },
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.Default.ArrowBack, contentDescription = stringResource(R.string.go_back))
                     }
                 }
             )
@@ -57,14 +59,14 @@ fun LoginScreen(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
-                    text = "Enter your GitHub Personal Access Token",
+                    text = stringResource(R.string.enter_token),
                     style = MaterialTheme.typography.h6,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.padding(bottom = 16.dp)
                 )
                 
                 Text(
-                    text = "To use this app with your GitHub account, you need to create a personal access token with the following scopes: repo, user",
+                    text = stringResource(R.string.token_help),
                     style = MaterialTheme.typography.body1,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.padding(bottom = 24.dp)
@@ -73,14 +75,14 @@ fun LoginScreen(
                 OutlinedTextField(
                     value = token,
                     onValueChange = { token = it },
-                    label = { Text("Personal Access Token") },
+                    label = { Text(stringResource(R.string.personal_access_token)) },
                     modifier = Modifier.fillMaxWidth(),
                     visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                     trailingIcon = {
                         IconButton(onClick = { passwordVisible = !passwordVisible }) {
                             Icon(
                                 imageVector = if (passwordVisible) Icons.Default.VisibilityOff else Icons.Default.Visibility,
-                                contentDescription = if (passwordVisible) "Hide token" else "Show token"
+                                contentDescription = if (passwordVisible) stringResource(R.string.hide_token) else stringResource(R.string.show_token)
                             )
                         }
                     },
@@ -94,13 +96,13 @@ fun LoginScreen(
                     modifier = Modifier.fillMaxWidth(),
                     enabled = token.isNotBlank() && uiState !is LoginUiState.Loading
                 ) {
-                    Text("Login")
+                    Text(stringResource(R.string.login))
                 }
                 
                 Spacer(modifier = Modifier.height(16.dp))
                 
                 Text(
-                    text = "Don't have a token? Go to GitHub > Settings > Developer settings > Personal access tokens to create one.",
+                    text = stringResource(R.string.token_help),
                     style = MaterialTheme.typography.caption,
                     textAlign = TextAlign.Center
                 )

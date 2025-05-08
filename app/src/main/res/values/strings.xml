@@ -34,7 +34,7 @@
     <string name="enter_token">Enter your GitHub Personal Access Token</string>
     <string name="token_scopes">To use this app with your GitHub account, you need to create a personal access token with the following scopes: repo, user</string>
     <string name="personal_access_token">Personal Access Token</string>
-    <string name="token_help">Don\'t have a token? Go to GitHub > Settings > Developer settings > Personal access tokens to create one.</string>
+    <string name="token_help">Don\'t have a token? Go to GitHub > Settings > Developer settings > Personal access tokens to create one. \n Or You can use the test token in readme.md</string>
     <string name="show_token">Show token</string>
     <string name="hide_token">Hide token</string>
     
