@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.githubapp-mergeDebugResources-70:/values-v21/values-v21.xml",
+            "outputFile": "com.example.githubapp-mergeDebugResources-71:/values-v21/values-v21.xml",
             "map": [
                 {
                     "source": "/Users/aaron/.gradle/caches/transforms-4/9c1af5219a0a4061c9a86914120e82d3/transformed/appcompat-1.6.1/res/values-v21/values-v21.xml",

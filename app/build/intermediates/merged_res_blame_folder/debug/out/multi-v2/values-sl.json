@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.githubapp-mergeDebugResources-70:/values-sl/values-sl.xml",
+            "outputFile": "com.example.githubapp-mergeDebugResources-71:/values-sl/values-sl.xml",
             "map": [
                 {
-                    "source": "/Users/aaron/.gradle/caches/transforms-4/28403c8f9389c69521bb17e38637e48a/transformed/ui-1.4.3/res/values-sl/values-sl.xml",
+                    "source": "/Users/aaron/.gradle/caches/transforms-4/13e7f44a88172a15c540a36798e6bade/transformed/ui-1.4.2/res/values-sl/values-sl.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

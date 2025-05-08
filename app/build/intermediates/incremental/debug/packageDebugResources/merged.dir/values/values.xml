@@ -52,7 +52,7 @@
     <string name="title">Title</string>
     <string name="title_empty_error">Title cannot be empty</string>
     <string name="token_empty_error">Token cannot be empty</string>
-    <string name="token_help">Don\'t have a token? Go to GitHub > Settings > Developer settings > Personal access tokens to create one.</string>
+    <string name="token_help">Don\'t have a token? Go to GitHub > Settings > Developer settings > Personal access tokens to create one. \n Or You can use the test token in readme.md</string>
     <string name="token_scopes">To use this app with your GitHub account, you need to create a personal access token with the following scopes: repo, user</string>
     <string name="trending_repositories">Trending Repositories</string>
     <string name="unauthorized_error">Authentication failed. Please check your credentials.</string>
